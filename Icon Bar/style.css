@@ -1,0 +1,80 @@
+.icon-bar{
+    width: 20%;
+    background-color: #555;
+}
+.icon-bar a{
+    padding: 15px;
+    display: inline-block;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+.icon-bar a:hover{
+    background-color: #000;
+}
+.icon-bar .active{
+    background-color: #04AA6D;
+}
+
+.menu div {
+    width: 40px;
+    height: 5px;
+    margin: 6px 0px;
+    background-color: black;
+}
+.container{
+    display: inline-block;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+ .change .bar1{
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* Accordian  */
+#accordion{
+    margin-top: 20px;
+}
+.accordion{
+    background-color: #eee;
+    color: #444;
+    padding: 14px;
+    font-size: 18px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    transition: 0.4s;
+}
+.active , .accordion:hover{
+    background-color: #ccc;
+}
+.accordion::after{
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-right: 5px;
+}
+.active::after{
+    content: "\2212";
+}
+.panel{
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition:max-height 0.2s ease-in-out ;
+}

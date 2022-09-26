@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Icon Bar</title>
+</head>
+<body>
+
+   
+    <div class="icon-bar">
+        <a href="" class="active"><i class="fa-solid fa-house"></i></a>
+        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href=""><i class="fa-solid fa-message"></i></a>
+        <a href=""><i class="fa-solid fa-trash"></i></a>
+    </div>
+
+    <div class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="container" onclick="myFunc(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <!-- Accordion  -->
+    
+    <div class="" id="accordion">
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo esse quod mollitia ullam, provident dolor odio perspiciatis eligendi enim delectus, exercitationem aliquid sequi. Sequi fuga quisquam, similique repellat aperiam ad?</p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo esse quod mollitia ullam, provident dolor odio perspiciatis eligendi enim delectus, exercitationem aliquid sequi. Sequi fuga quisquam, similique repellat aperiam ad?</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo esse quod mollitia ullam, provident dolor odio perspiciatis eligendi enim delectus, exercitationem aliquid sequi. Sequi fuga quisquam, similique repellat aperiam ad?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad labore architecto exercitationem aliquid reiciendis earum quaerat accusamus nostrum! Tempora incidunt dolorum voluptatum sequi assumenda ratione aspernatur corrupti fugit temporibus ex!</p>
+        </div>
+    </div>
+
+    <script>
+
+        // Menu Toggle 
+        function myFunc(x){
+            x.classList.toggle("change");
+        }
+
+        // Accordion 
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for(i = 0; i < acc.length; i++ ){
+            acc[i].addEventListener("click", function(){
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if(panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                }
+                else{
+                    panel.style.maxHeight = panel.scrollHeight +"px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
